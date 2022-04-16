@@ -1,0 +1,146 @@
+body{
+    font-family: Poppins;
+    background-image: url(../images/concrete_seamless.png);
+    background-color: #f1f1f1;
+  }
+
+header{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.nav_links {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav_item a:visited {
+  color: #0000EE;
+}
+
+.pricing {
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex-basis: 450px;
+}
+
+.card > header {
+  background: #288088;
+  border: solid 2px #45ADAD;
+  border-radius: 50px 50px 0px 0px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.gallery img{
+  border: solid 10px #50C7c7;
+  margin: 10px;
+  width: 300px;
+}
+
+#logo {
+  animation: mymove 5s;
+}
+
+@keyframes mymove {
+  from {width: 25px; opacity: 0;}
+  to {width: 475px; opacity: 1;}
+}
+
+@media only screen and (min-width: 900px) {
+
+  body > header {
+    height: 78px;
+    justify-content: space-between;
+    position: sticky;
+    align-items: center; 
+    z-index: 1;
+    top: 0px;
+
+  }
+
+  .nav_links {
+    flex-direction: row;
+  }
+
+  #logo{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  @media screen and (prefers-reduced-motion: reduce) {
+    #logo {
+        animation: none;
+    }
+  }
+
+  .card{
+    flex-basis: 250px;
+  }
+
+  .card{
+    border: solid 2px #45ADDD;
+    border-radius: 50px 50px 0px 0px; 
+    flex-basis: 325px;
+  }
+
+
+  header {
+    flex-direction: row;
+  }
+
+}
+
+@media print {
+  body{        
+    font-family:Arial, Helvetica, sans-serif;
+    background-image: none;
+  }
+
+ 
+  #logo{
+    justify-content: center;
+    animation: none;
+  }
+
+  .nav_links{
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: 160px;
+  }
+
+  .gallery , #gallery {
+    display: none;
+  }
+
+  .pricing{
+    flex-wrap: nowrap;
+    align-items: flex-end;
+  }
+
+  div.card  ul  li:nth-child(2n)::after {
+    content: " 👍";
+  }
+}
+
+
+
+
+
+
+
